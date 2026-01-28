@@ -1,6 +1,17 @@
-import cartaBebidas from "../assets/carta/carta-bebidas.jpg";
-import cartaWaffles from "../assets/carta/carta-waffles.jpg";
-import cartaEmpanadas from "../assets/carta/carta-empanadas.jpg";
+// ✅ Carga automática de imágenes desde src/assets/carta
+const covers = import.meta.glob("../assets/carta/*.{png,jpg,jpeg,webp}", {
+  eager: true,
+  import: "default",
+});
+
+// Busca una imagen por slug (ej: "cafe") dentro del nombre del archivo
+function coverFor(slug) {
+  const s = slug.toLowerCase();
+  const entry = Object.entries(covers).find(([path]) =>
+    path.toLowerCase().includes(`/assets/carta/${s}`)
+  );
+  return entry ? entry[1] : null;
+}
 
 export const CATEGORIES = [
   // =====================
@@ -10,7 +21,7 @@ export const CATEGORIES = [
     slug: "cafe",
     title: "Café",
     emoji: "☕",
-    cover: cartaBebidas,
+    cover: coverFor("cafe"),
     subtitle: "Clásicos y especialidades.",
     items: [
       { name: "Americano", desc: "Café filtrado, suave y aromático.", price: "$3.800 (9oz)" },
@@ -36,7 +47,7 @@ export const CATEGORIES = [
     slug: "bebestibles",
     title: "Bebestibles",
     emoji: "🥤",
-    cover: cartaBebidas,
+    cover: coverFor("bebestibles"),
     subtitle: "Bebidas, jugos, té y más.",
     items: [
       { name: "Bebidas en lata", desc: "Variedades según disponibilidad.", price: "$1.500" },
@@ -57,7 +68,7 @@ export const CATEGORIES = [
     slug: "helados",
     title: "Helados",
     emoji: "🍦",
-    cover: cartaBebidas,
+    cover: coverFor("helados"),
     subtitle: "Barquillos y copas.",
     items: [
       { name: "Barquillo Simple", desc: "1 porción.", price: "$2.500" },
@@ -74,7 +85,7 @@ export const CATEGORIES = [
     slug: "tortas",
     title: "Tortas",
     emoji: "🍰",
-    cover: cartaBebidas,
+    cover: coverFor("tortas"),
     subtitle: "Clásicos dulces de la casa.",
     items: [
       { name: "Torta amor", desc: "Porción.", price: "$5.000" },
@@ -94,14 +105,13 @@ export const CATEGORIES = [
     slug: "waffles",
     title: "Waffles",
     emoji: "🧇",
-    cover: cartaWaffles,
+    cover: coverFor("waffles"),
     subtitle: "Sabores y combinaciones.",
     items: [
       { name: "Cactus", desc: "Waffle especial.", price: "$4.500" },
       { name: "Del Bosque", desc: "Waffle especial.", price: "$6.500" },
       { name: "El suculento", desc: "Waffle especial.", price: "$8.500" },
       { name: "Isidora", desc: "Waffle premium.", price: "$10.000" },
-
       { name: "Base", desc: "Manjar - Nutela - Chocolare - Mermelada", price: "Incluido" },
       { name: "Salsas", desc: "Manjar - Frutilla - Caramelo", price: "Incluido" },
       { name: "Toppings", desc: "Oreo - Brownie - Obsesión - Costa rama", price: "Incluido" },
@@ -116,14 +126,13 @@ export const CATEGORIES = [
     slug: "panqueques",
     title: "Panqueques",
     emoji: "🥞",
-    cover: cartaWaffles,
+    cover: coverFor("panqueques"),
     subtitle: "Dulces y contundentes.",
     items: [
       { name: "2 Panqueques", desc: "Porción.", price: "$4.500" },
       { name: "2 Panqueques (opción 2)", desc: "Según disponibilidad.", price: "$5.500" },
       { name: "2 Panqueques + helado y crema", desc: "Helado y crema.", price: "$5.500" },
       { name: "2 Panqueques + helado, crema y salsa", desc: "Helado, crema y salsa.", price: "$6.500" },
-
       { name: "Relleno", desc: "Manjar - Mermelada", price: "Incluido" },
       { name: "Salsas", desc: "Chocolate - Manjar - Frutilla - Caramelo", price: "Incluido" },
       { name: "Agregado extra", desc: "Helado - Salsa extra - Crema extra", price: "Consultar" },
@@ -137,7 +146,7 @@ export const CATEGORIES = [
     slug: "sangucheria",
     title: "Sanguchería",
     emoji: "🥪",
-    cover: cartaWaffles,
+    cover: coverFor("sangucheria"),
     subtitle: "Clásicos chilenos.",
     items: [
       { name: "Jamon Queso", desc: "Sándwich clásico.", price: "$3.500" },
@@ -157,7 +166,7 @@ export const CATEGORIES = [
     slug: "pailas",
     title: "Pailas",
     emoji: "🍳",
-    cover: cartaWaffles,
+    cover: coverFor("pailas"),
     subtitle: "Arma tu combinación.",
     items: [
       { name: "Simple", desc: "Base simple.", price: "$2.500" },
@@ -174,7 +183,7 @@ export const CATEGORIES = [
     slug: "empanadas",
     title: "Empanadas",
     emoji: "🥟",
-    cover: cartaEmpanadas,
+    cover: coverFor("empanadas"),
     subtitle: "Variedades y promo.",
     items: [
       { name: "Pino", desc: "Clásica.", price: "$3.500" },
@@ -183,7 +192,6 @@ export const CATEGORIES = [
       { name: "Aceituna queso", desc: "Aceitunas + queso.", price: "$3.500" },
       { name: "Pastel de choclo", desc: "Sabor tradicional.", price: "$3.500" },
       { name: "Camaron queso", desc: "Marino.", price: "$3.500" },
-
       { name: "Pino ají", desc: "Con toque picante.", price: "$3.500" },
       { name: "Champiñon queso", desc: "Champiñón y queso.", price: "$3.500" },
       { name: "Pollo queso", desc: "Pollo y queso.", price: "$3.500" },
@@ -191,7 +199,6 @@ export const CATEGORIES = [
       { name: "Mechada queso", desc: "Mechada y queso.", price: "$3.500" },
       { name: "Tocino champiñon", desc: "Tocino + champiñón.", price: "$3.500" },
       { name: "Cebolla caramelizada + crema", desc: "Cebolla caramelizada y crema.", price: "$3.500" },
-
       { name: "Promo 3 empanadas", desc: "3 empanadas por promo.", price: "$10.000" },
     ],
   },
