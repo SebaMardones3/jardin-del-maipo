@@ -2,6 +2,7 @@
   "name": "jardin-del-maipo",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://SebaMardones3.github.io/jardin-del-maipo",
   "type": "module",
   "scripts": {
     "dev": "vite",
