@@ -16,36 +16,6 @@ function coverFor(slug) {
 export const CATEGORIES = [
 
   // =====================
-  // 💘 ESPECIAL SAN VALENTÍN
-  // =====================
-  {
-    slug: "san-valentin",
-    title: "Especial San Valentín",
-    emoji: "💘",
-    cover: coverFor("sanvalentin"), // asegúrate de tener una imagen con ese nombre en assets/carta
-    subtitle: "Promociones exclusivas por el Día de los Enamorados.",
-    items: [
-      {
-        name: "2 Cafés + 1 Torta Amor",
-        desc: "Expresso / Cortado / Capuccino / Latte / Mokaccino.",
-        price: "$9.000"
-      },
-      {
-        name: "2 Jugos Naturales + 2 Panqueques con Helado",
-        desc: "Jugos frescos + panqueques con helado.",
-        price: "$11.000"
-      },
-      {
-        name: "1 Copita del Maipo + 2 Bebidas Lata",
-        desc: "Helado + crema + salsa + 2 bebidas en lata.",
-        price: "$9.000"
-      },
-    ],
-  },
-
-
-
-  // =====================
   // CAFÉ
   // =====================
   {
@@ -89,7 +59,7 @@ export const CATEGORIES = [
       { name: "Jugos Naturales", desc: "Jugos frescos.", price: "$3.500" },
       { name: "Energéticas", desc: "Según disponibilidad.", price: "$2.000" },
       { name: "Kombuchas", desc: "Fermentado natural.", price: "$3.000" },
-      { name: "Smoothie", desc: "Melon, Durazno, Mango, Frutilla, Arandano, Frambuesa, Platano, Piña", price: "$5.000" },
+      { name: "Smoothie", desc: "Frutilla, Arandano, Frambuesa, Platano, Piña", price: "$5.000" },
       { name: "Milkshake", desc: "Bebida elaborada a base de leche, que puede llevar frutas", price: "$5.500" },
     ],
   },
@@ -108,7 +78,6 @@ export const CATEGORIES = [
       { name: "Barquillo Doble", desc: "2 porciones.", price: "$4.000" },
       { name: "Barquillo triple", desc: "3 porciones.", price: "$6.000" },
       { name: "Copa del Maipo", desc: "Tres bolitas de helado + crema + salsa.", price: "$7.500" },
-      { name: "Frapuccino Caramelo / Chocolate", desc: "Helado a Eleccion", price: "$5.500" },
     ],
   },
 
