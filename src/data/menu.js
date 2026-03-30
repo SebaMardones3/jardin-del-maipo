@@ -15,9 +15,7 @@ function coverFor(slug) {
 
 export const CATEGORIES = [
 
-  // =====================
   // CAFÉ
-  // =====================
   {
     slug: "cafe",
     title: "Café",
@@ -41,9 +39,7 @@ export const CATEGORIES = [
     ],
   },
 
-  // =====================
   // BEBESTIBLES
-  // =====================
   {
     slug: "bebestibles",
     title: "Bebestibles",
@@ -63,9 +59,9 @@ export const CATEGORIES = [
     ],
   },
 
-  // =====================
+
   // HELADOS
-  // =====================
+
   {
     slug: "helados",
     title: "Helados",
@@ -80,9 +76,9 @@ export const CATEGORIES = [
     ],
   },
 
-  // =====================
+
   // TORTAS
-  // =====================
+ 
   {
     slug: "Repostería",
     title: "Repostería",
@@ -101,9 +97,7 @@ export const CATEGORIES = [
     ],
   },
 
-  // =====================
   // WAFFLES
-  // =====================
   {
     slug: "waffles",
     title: "Waffles",
@@ -122,9 +116,8 @@ export const CATEGORIES = [
     ],
   },
 
-  // =====================
   // PANQUEQUES
-  // =====================
+  
   {
     slug: "Panqueques",
     title: "Panqueques",
@@ -142,9 +135,8 @@ export const CATEGORIES = [
     ],
   },
 
-  // =====================
   // SANGUCHERÍA
-  // =====================
+  
   {
     slug: "Sandwich",
     title: "Sandwich",
@@ -163,9 +155,7 @@ export const CATEGORIES = [
     ],
   },
 
-  // =====================
   // PAILAS
-  // =====================
   {
     slug: "pailas",
     title: "Pailas",
@@ -180,9 +170,7 @@ export const CATEGORIES = [
     ],
   },
 
-  // =====================
   // EMPANADAS
-  // =====================
   {
     slug: "empanadas",
     title: "Empanadas",
