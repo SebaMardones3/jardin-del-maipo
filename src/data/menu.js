@@ -48,7 +48,7 @@ export const CATEGORIES = [
     subtitle: "Bebidas, jugos, té y más.",
     items: [
       { name: "Bebida Lata", desc: "Variedades según disponibilidad.", price: "$2.000" },
-      { name: "Agua", desc: "Agua mineral con y sin gas.", price: "$1.500" },
+      { name: "Agua", desc: "Agua mineral con y sin gas.", price: "$2.000" },
       { name: "Té", desc: "Té caliente.", price: "$2.000" },
       { name: "Infusiones", desc: "Hierbas y mezclas.", price: "$2.000" },
       { name: "Jugos Naturales", desc: "Jugos frescos.", price: "$3.500" },
