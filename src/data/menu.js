@@ -80,7 +80,7 @@ export const CATEGORIES = [
     slug: "almuerzos",
     title: "Almuerzos",
     emoji: "🍛",
-    cover: coverFor("almuerzo"),
+    cover: coverFor("almuerzos"),
     subtitle: "Almuezo segun la disponibilidad",
     items: [
       { name: "Menu Economico ", desc: "2 agregados y ensaldas (consultar Disponibilidad. )", price: "$6.500" },
