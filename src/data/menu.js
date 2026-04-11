@@ -23,7 +23,7 @@ export const CATEGORIES = [
     cover: coverFor("cafe"),
     subtitle: "Clásicos y especialidades.",
     items: [
-      { name: "Americano", desc: "Café filtrado, suave y aromático.", price: "$4.500 (9oz)" },
+      { name: "Americano", desc: "Café filtrado, suave y aromático.", price: "$3.500 (9oz)" },
       { name: "Espresso Italiano", desc: "Shot intenso y equilibrado.", price: "$2.500" },
       { name: "Cortado", desc: "Espresso con un toque de leche.", price: "$2.800 (9oz) / $3.800 (12oz)" },
       { name: "Capuccino Italiano", desc: "Espresso, leche y espuma.", price: "$2.800 (9oz) / $3.800 (12oz)" },
@@ -76,9 +76,18 @@ export const CATEGORIES = [
     ],
   },
 
-
+  {
+    slug: "almuerzos",
+    title: "Almuerzos",
+    emoji: "🍛",
+    cover: coverFor("almuerzo"),
+    subtitle: "Almuezo segun la disponibilidad",
+    items: [
+      { name: "Menu Economico ", desc: "2 agregados y ensaldas (consultar Disponibilidad. )", price: "$6.500" },
+    ],
+  },
   // TORTAS
- 
+
   {
     slug: "Repostería",
     title: "Repostería",
@@ -117,7 +126,7 @@ export const CATEGORIES = [
   },
 
   // PANQUEQUES
-  
+
   {
     slug: "Panqueques",
     title: "Panqueques",
@@ -136,7 +145,7 @@ export const CATEGORIES = [
   },
 
   // SANGUCHERÍA
-  
+
   {
     slug: "Sandwich",
     title: "Sandwich",
